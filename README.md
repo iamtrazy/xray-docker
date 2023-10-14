@@ -10,7 +10,7 @@ eg: nano xray-docker/config.json
 
 ## build the docker image using docker buildx
 
-cd xray-docker
+cd xray-docker  
 docker buildx build -t xray .
 
 ## run the docker image with host port 80
