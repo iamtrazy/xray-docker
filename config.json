@@ -1,0 +1,36 @@
+{
+  "log": {
+    "access": "/usr/share/caddy/access.log",
+    "error": "/usr/share/caddy/error.log",
+    "loglevel": "info"
+  },
+  "inbounds": [
+    {
+      "tag": "VLESS-WS",
+      "listen": "/dev/shm/vws.sock",
+      "protocol": "vless",
+      "settings": {
+        "decryption": "none",
+        "clients": [
+          {
+            "id": "$UUID",
+            "email": "iamtrazy"
+          }
+        ]
+      },
+      "streamSettings": {
+        "security": "none",
+        "network": "ws",
+        "wsSettings": {
+          "path": "/iamtrazy?ed=2048"
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "tag": "DIRECT"
+    }
+  ]
+}

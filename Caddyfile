@@ -1,0 +1,22 @@
+{
+	order reverse_proxy before route
+	admin off
+	log {
+		output file /usr/share/caddy/caddy_access.log
+		level INFO
+	}
+}
+
+:80 {
+
+	root * /usr/share/caddy
+
+	file_server
+
+	@vws {
+		path /iamtrazy
+		header Connection *Upgrade*
+		header Upgrade websocket
+	}
+	reverse_proxy @vws unix//dev/shm/vws.sock
+}
