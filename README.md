@@ -3,15 +3,17 @@
 ## prerequisites - docker.io and docker-buildx
 
 sudo apt-get update && sudo apt-get install -y docker.io docker-buildx  
-sudo usermod -aG docker $USER
+sudo usermod -aG docker $USER  
+
+point the domain to server ip before starting the container.
 
 ## clone this repository to a vps
 
 git clone https://github.com/iamtrazy/xray-docker.git
 
-## edit and change the $UUID in the config.json file using a text editor
+## edit and change the $UUID in the .env file
 
-eg: nano xray-docker/config.json
+eg: nano xray-docker/.env
 
 ## build the docker image using docker buildx
 
@@ -20,4 +22,4 @@ docker buildx build -t xray .
 
 ## run the docker image with host port 80
 
-docker run --name xray -p 80:80 -d xray:latest
+docker run --name xray -p 80:80 --restart unless-stopped -d xray:latest

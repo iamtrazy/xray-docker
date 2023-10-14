@@ -1,6 +1,3 @@
 #!/bin/sh
-bash <(echo 'IyBTdGFydCB4cmF5IGluIHRoZSBiYWNrZ3JvdW5kCi91c3IvYmluL3hyYXkgcnVuIC1jIC9ldGMv
-Y3hoMmMvY29uZmlnLmpzb24gPiAvZGV2L251bGwgMj4mMSAmCgojIFNsZWVwIGZvciBhIGZldyBz
-ZWNvbmRzIHRvIGFsbG93IHhyYXkgdG8gc3RhcnQKc2xlZXAgNQoKIyBTdGFydCBDYWRkeQpjYWRk
-eSBmbXQgLS1vdmVyd3JpdGUgL2V0Yy9jYWRkeS9DYWRkeWZpbGUKY2FkZHkgcnVuIC0tY29uZmln
-IC9ldGMvY2FkZHkvQ2FkZHlmaWxlIC0tYWRhcHRlciBjYWRkeWZpbGUK' | base64 -d)
+nohup /usr/bin/xray run -c /etc/xray/config.json &>/dev/null &
+nohup caddy run --config /etc/caddy/Caddyfile --adapter caddyfile
