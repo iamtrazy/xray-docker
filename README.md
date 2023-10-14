@@ -6,7 +6,7 @@ git clone https://github.com/iamtrazy/xray-docker.git
 
 ## edit and change the $UUID in the config.json file using a text editor
 
-eg: xray-docker/config.json
+eg: nano xray-docker/config.json
 
 ## build the docker image using docker buildx
 
