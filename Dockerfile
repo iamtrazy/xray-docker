@@ -18,7 +18,6 @@ COPY index.html /usr/share/caddy/index.html
 
 WORKDIR /root
 
-COPY .env /root/.env
 COPY env.sh /root/env.sh
 COPY start.sh /root/start.sh
 RUN set -ex \
