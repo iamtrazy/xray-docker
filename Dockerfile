@@ -1,6 +1,8 @@
 FROM caddy:latest
 LABEL maintainer="iamtrazy <iamtrazy@proton.me>"
 
+ARG UUID
+
 WORKDIR /root
 
 COPY config.json /root/config.json
