@@ -1,11 +1,5 @@
-#!/bin/sh
-source .env
-
-# Check if UUID is set in the .env file
-if [ -z "$UUID" ]; then
-  echo "UUID is not set in .env file"
-  exit 1
-fi
-
-sed -i "s/\$UUID/$UUID/g" /etc/xray/config.json
-echo "Replaced all occurrences of \$UUID with $UUID in /etc/xray/config.json"
+IyEvYmluL3NoCnNvdXJjZSAuZW52CgojIENoZWNrIGlmIFVVSUQgaXMgc2V0IGluIHRoZSAuZW52
+IGZpbGUKaWYgWyAteiAiJFVVSUQiIF07IHRoZW4KICBlY2hvICJVVUlEIGlzIG5vdCBzZXQgaW4g
+LmVudiBmaWxlIgogIGV4aXQgMQpmaQoKc2VkIC1pICJzL1wkVVVJRC8kVVVJRC9nIiAvZXRjL3hy
+YXkvY29uZmlnLmpzb24KZWNobyAiUmVwbGFjZWQgYWxsIG9jY3VycmVuY2VzIG9mIFwkVVVJRCB3
+aXRoICRVVUlEIGluIC9ldGMveHJheS9jb25maWcuanNvbiIK
