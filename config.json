@@ -1,8 +1,8 @@
 {
   "log": {
-    "access": "/usr/share/caddy/access.log",
-    "error": "/usr/share/caddy/error.log",
-    "loglevel": "info"
+    "access": "/var/log/xray/access.log",
+    "error": "/var/log/xray/error.log",
+    "loglevel": "none"
   },
   "inbounds": [
     {

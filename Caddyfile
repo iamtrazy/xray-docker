@@ -2,7 +2,7 @@
 	order reverse_proxy before route
 	admin off
 	log {
-		output file /usr/share/caddy/caddy_access.log
+		output file /var/log/caddy/access.log
 		level INFO
 	}
 }
