@@ -7,9 +7,10 @@
 	}
 }
 
-:80 {
-
+:$PORT {
 	root * /usr/share/caddy
+
+	auto_https off
 
 	file_server
 

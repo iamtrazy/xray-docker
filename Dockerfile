@@ -6,6 +6,7 @@ ARG UUID
 WORKDIR /root
 
 COPY config.json /root/config.json
+COPY .env /root/.env
 COPY setup.sh /root/setup.sh
 
 RUN set -ex \
