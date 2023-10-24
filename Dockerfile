@@ -21,7 +21,8 @@ COPY run.sh /root/run.sh
 RUN set -ex \
     && chmod +x /root/env.sh \
     && chmod +x /root/run.sh \
-    && /root/env.sh \
     && caddy fmt --overwrite /etc/caddy/Caddyfile
+
+EXPOSE 80
 
 CMD ["/root/run.sh"]

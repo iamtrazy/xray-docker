@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 mkdir -p /var/log/sing-box /var/lib/sing-box
 
