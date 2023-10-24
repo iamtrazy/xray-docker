@@ -5,6 +5,7 @@ WORKDIR /root
 COPY sing.sh /root/sing.sh
 
 RUN set -ex \
+    && mkdir -p /var/log/caddy \
     && chmod +x /root/sing.sh \
     && /root/sing.sh \
     && rm -fv /root/sing.sh
