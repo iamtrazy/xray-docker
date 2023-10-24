@@ -2,14 +2,14 @@ FROM caddy:latest
 LABEL maintainer="iamtrazy <iamtrazy@proton.me>"
 
 WORKDIR /root
-COPY xray.sh /root/xray.sh
+COPY sing.sh /root/sing.sh
 
 RUN set -ex \
-    && chmod +x /root/xray.sh \
-    && /root/xray.sh \
-    && rm -fv /root/xray.sh
+    && chmod +x /root/sing.sh \
+    && /root/sing.sh \
+    && rm -fv /root/sing.sh
 
-COPY config.json /etc/xray/config.json
+COPY config.json /etc/sing-box/config.json
 COPY Caddyfile /etc/caddy/Caddyfile
 COPY index.html /usr/share/caddy/index.html
 

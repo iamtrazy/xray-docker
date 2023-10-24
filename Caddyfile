@@ -8,8 +8,9 @@
 }
 
 :80 {
-
 	root * /usr/share/caddy
+
+	header_down Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 
 	file_server
 

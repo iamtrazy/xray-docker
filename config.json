@@ -1,36 +1,30 @@
 {
   "log": {
-    "access": "/usr/share/caddy/access.log",
-    "error": "/usr/share/caddy/error.log",
-    "loglevel": "info"
+    "disabled": true,
+    "level": "info",
+    "output": "/var/log/sing-box/access.log"
   },
   "inbounds": [
     {
+      "type": "vless",
       "tag": "VLESS-WS",
       "listen": "/dev/shm/vws.sock",
-      "protocol": "vless",
-      "settings": {
-        "decryption": "none",
-        "clients": [
-          {
-            "id": "$UUID",
-            "email": "iamtrazy"
-          }
-        ]
-      },
-      "streamSettings": {
-        "security": "none",
-        "network": "ws",
-        "wsSettings": {
-          "path": "/iamtrazy?ed=2048"
+      "tcp_fast_open": true,
+      "users": [
+        {
+          "uuid": "$UUID"
         }
+      ],
+      "transport": {
+        "type": "ws",
+        "path": "/iamtrazy"
       }
     }
   ],
   "outbounds": [
     {
-      "protocol": "freedom",
-      "tag": "DIRECT"
+      "type": "direct",
+      "tag": "direct"
     }
   ]
 }
