@@ -5,7 +5,10 @@ mkdir -p /var/log/sing-box /var/lib/sing-box
 if [[ "$(uname)" == 'Linux' ]]; then
     case "$(uname -m)" in
         'amd64' | 'x86_64')
-            ARCH='amd64'
+            supports_v2='awk "/cx16/&&/lahf/&&/popcnt/&&/sse4_1/&&/sse4_2/&&/ssse3/ {found=1} END {exit !found}"'
+            supports_v3='awk "/avx/&&/avx2/&&/bmi1/&&/bmi2/&&/f16c/&&/fma/&&/abm/&&/movbe/&&/xsave/ {found=1} END {exit !found}"'
+            echo "$flags" | eval $supports_v2 || ARCH='amd64'
+            echo "$flags" | eval $supports_v3 || ARCH='amd64v3'
         ;;
         'armv8' | 'aarch64')
             ARCH='arm64'
