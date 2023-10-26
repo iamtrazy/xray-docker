@@ -26,7 +26,7 @@ SING_FILE="sing-box-1.6.0-rc.1-linux-${ARCH}.tar.gz"
 
 
 echo "Downloading binary file: ${SING_FILE}"
-wget -O /tmp/sing.tar.gz https://github.com/SagerNet/sing-box/releases/download/1.6.0-rc.1/${SING_FILE} > /dev/null 2>&1
+wget -O /tmp/sing.tar.gz https://github.com/SagerNet/sing-box/releases/download/v1.6.0-rc.1/${SING_FILE} > /dev/null 2>&1
 if [ $? -ne 0 ]; then
     echo "Error: Failed to download binary file: ${SING_FILE}" && exit 1
 fi
