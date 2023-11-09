@@ -22,17 +22,17 @@ fi
 
 [ -z "${ARCH}" ] && echo "Error: Not supported OS Architecture" && exit 1
 # Download binary file
-SING_FILE="sing-box-1.6.1-linux-${ARCH}.tar.gz"
+SING_FILE="sing-box-1.6.2-linux-${ARCH}.tar.gz"
 
 
 echo "Downloading binary file: ${SING_FILE}"
-wget -O /tmp/sing.tar.gz https://github.com/SagerNet/sing-box/releases/download/v1.6.1/${SING_FILE} > /dev/null 2>&1
+wget -O /tmp/sing.tar.gz https://github.com/SagerNet/sing-box/releases/download/v1.6.2/${SING_FILE} > /dev/null 2>&1
 if [ $? -ne 0 ]; then
     echo "Error: Failed to download binary file: ${SING_FILE}" && exit 1
 fi
 echo "Download binary file: ${SING_FILE} completed"
 
-tar xvf /tmp/sing.tar.gz sing-box-1.6.1-linux-${ARCH}/sing-box -C /tmp --strip-components=1
+tar xvf /tmp/sing.tar.gz sing-box-1.6.2-linux-${ARCH}/sing-box -C /tmp --strip-components=1
 mv /tmp/sing-box /usr/local/bin/sing-box
 rm -f /tmp/sing.tar.gz
 
