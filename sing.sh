@@ -1,5 +1,5 @@
 #!/bin/sh
-https://github.com/SagerNet/sing-box/releases/download/v1.7.0-beta.2/sing-box-1.7.0-beta.2-linux-amd64v3.tar.gz
+
 mkdir -p /var/log/sing-box /var/lib/sing-box
 
 if [[ "$(uname)" == 'Linux' ]]; then
