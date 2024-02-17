@@ -1,8 +1,6 @@
 {
   "log": {
-    "disabled": true,
-    "level": "info",
-    "output": "/var/log/sing-box/access.log"
+    "disabled": true
   },
   "inbounds": [
     {
