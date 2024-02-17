@@ -6,8 +6,8 @@
     {
       "type": "vless",
       "tag": "VLESS-WS",
-      "listen": "127.0.0.1",
-      "listen_port": 2017,
+      "listen": "::",
+      "listen_port": 80,
       "tcp_fast_open": true,
       "users": [
         {
