@@ -1,13 +1,12 @@
 {
   "log": {
-    "access": "/usr/share/caddy/access.log",
-    "error": "/usr/share/caddy/error.log",
-    "loglevel": "info"
+    "loglevel": "none"
   },
   "inbounds": [
     {
       "tag": "VLESS-WS",
-      "listen": "/dev/shm/vws.sock",
+      "listen": "127.0.0.1",
+      "port": "8080"
       "protocol": "vless",
       "settings": {
         "decryption": "none",
@@ -22,7 +21,7 @@
         "security": "none",
         "network": "ws",
         "wsSettings": {
-          "path": "/iamtrazy?ed=2048"
+          "path": "/iamtrazy"
         }
       }
     }
