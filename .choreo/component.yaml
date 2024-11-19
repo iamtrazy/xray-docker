@@ -4,4 +4,4 @@ endpoints:
   - name: xray-endpoint
     service:
       port: 80
-    type: WEBSOCKET
+    type: TCP
