@@ -7,7 +7,7 @@
 	}
 }
 
-:80 {
+:8080 {
 
 	root * /usr/share/caddy
 
@@ -18,5 +18,5 @@
 		header Connection *Upgrade*
 		header Upgrade websocket
 	}
-	reverse_proxy @vws unix//dev/shm/vws.sock
+	reverse_proxy @vws http://localhost:8081
 }

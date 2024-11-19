@@ -3,5 +3,5 @@ schemaVersion: 1.0
 endpoints:
   - name: xray-endpoint
     service:
-      port: 80
+      port: 8080
     type: TCP
